@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header-inner">
             <!-- <a href="" class="meeting-logo"></a> -->
-            <nuxt-link :to="{path: '/'}" class="logo" >Meeting</nuxt-link>
+            <nuxt-link :to="{path: '/'}" class="logo" >Next</nuxt-link>
             <!--<div class="city-container">-->
             <!--<div class="city-selected">-->
             <!--<div class="city-name">-->
@@ -68,7 +68,7 @@
                 <div class="app-load-box clearfix js-load-box">
                     <img src="../../assets/img/appload.png" class="l">
                     <div class="r">
-                        <p>扫描下载慕课网APP</p>
+                        <p>扫描下载腾讯学院</p>
                         <a href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8" target="_blank"><i
                                 class="icon-apple"></i>App Store下载</a>
                         <a href="//www.imooc.com/mobile/mukewang.apk" target="_blank"><i class="icon-android"></i>Android下载</a>
@@ -115,7 +115,7 @@
             },
             logout() {
                 let _this = this;
-                getData(process.env.baseUrl + '/user/logout', 'get').then((res) => {
+                getData(process.env.BASE_URL+'/user/logout', 'get').then((res) => {
                     if (res && res.status == 0) {
                         Cookies.remove('token');
                         Cookies.remove('username');
