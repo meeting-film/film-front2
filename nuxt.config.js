@@ -28,7 +28,9 @@ module.exports = {
         '@/assets/css/global.css'
     ],
     modules: [
-        'nuxt-sass-resources-loader'
+        'nuxt-sass-resources-loader',
+        '@nuxtjs/axios',
+        '@nuxtjs/proxy'
     ],
     sassResources: ['@/assets/css/variable.scss'],
     /*
@@ -63,15 +65,19 @@ module.exports = {
         '~plugins/axios',
         '~plugins/validate'
     ],
+    env: {
+        // BASE_URL: 'https://www.easy-mock.com/mock/5b52fdd00a35bc5c5ece0613/film' || 'http://localhost:3000',
+        HOST: 'www.meetingshop.cn',
+        PORT: '80',
+        BASE_URL: 'http://www.meetingshop.cn'
+        // BASE_URL: 'http://116.196.88.248'
+        // BASE_URL: 'http://120.27.10.5:80'
+    },
     axios: {
         proxy: true
     },
-    env: {
-        // baseUrl: 'https://www.easy-mock.com/mock/5b52fdd00a35bc5c5ece0613/film' || 'http://localhost:3000'
-        baseUrl: '//www.meetingshop.cn'
-    },
-    proxyTable: [
-        '~/api'
-    ],
+    proxy: {
+        '/api': 'http://www.meetingshop.cn:80'
+    }
 };
 

@@ -1,7 +1,22 @@
-# PAGES
+# meeting_film_front
 
-This directory contains your Application Views and Routes.
-The framework reads all the .vue files inside this directory and creates the router of your application.
+> Meeting_film前端应用程序
 
-More information about the usage of this directory in the documentation:
-https://nuxtjs.org/guide/routing
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

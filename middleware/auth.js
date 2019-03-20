@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie'
 export default function ({error, redirect}) {
-    console.log(Cookies.get('token'))
     // if (!Cookies.get('token')) {
     //     error({
     //         message: 'You are not connected',
